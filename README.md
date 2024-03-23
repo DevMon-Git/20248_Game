@@ -1,4 +1,4 @@
-# 20248_Game
+# Game_2048
 
 ## Make a User and Email:
 
