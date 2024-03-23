@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-image: url('../assets/main.png'); /* Add your image path here */
+  background-size: cover; /* Cover ensures that the background covers the whole screen */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  height: 100vh; /* Make the body take up the full screen height */
+  margin: 0; /* Remove default margin */
+  transition: background-image 0.5s ease-in-out; /* Add this line */
+  overflow: hidden;
+}
+
+/* Both Welcome and Game over Pop up CSS Starts Here */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  overflow: hidden;
+}
+
+.modal-content {
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Stacks items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  background-image: url('../assets/startgame.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000;
+  margin: 15% auto;
+  padding: 20px;
+  width: 40%;
+  height: 40%;
+  position: relative; /* Needed if using absolute positioning inside */
+}
+
+.startGame {
+  background-image: url('../assets/startgame.png');
+}
+
+.gameOver {
+  background-image: url('../assets/gameover.png');
+}
+
+.button-container {
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center buttons in the container */
+  gap: 20px; /* Space between the buttons */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.662);
+}
+/* Both Welcome and Game over Pop up CSS Ends Here */
+
+/* Score Board CSS Starts Here */
+.scoreboard {
+  background-color: rgba(
+    205,
+    193,
+    181,
+    0.8
+  ); /* Adjust the alpha value for transparency */
+  color: #776e65; /* Adjust based on your preference */
+  padding: 10px;
+  margin: 20px auto;
+  width: 400px; /* Adjust based on your layout */
+  border-radius: 10px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow for depth */
+  text-align: center;
+}
+
+.scoreboard h1,
+.scoreboard h2 {
+  margin: 10px 0;
+}
+/* Score Board CSS Ends Here */
+
+/* Board CSS Starts Here */
+#board {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(205, 193, 181, 0.5); /* More transparent */
+  border: 6px solid rgba(167, 152, 137, 0.5); /* More transparent */
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Board CSS Ends Here */
+
+/* Tiles CSS Starts Here */
+.tile {
+  width: 90px;
+  height: 90px;
+  border: 5px solid rgba(187, 173, 160, 0.5); /* More transparent */
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0); /* More transparent */
+  transition: transform 200ms ease-in-out; /* Smooth transition for movement */
+}
+
+/* colored tiles */
+
+.x2 {
+  background-color: #eee4dad4;
+  color: #727371;
+}
+
+.x4 {
+  background-color: #ece0cad3;
+  color: #727371;
+}
+
+.x8 {
+  background-color: #f4b17ad3;
+  color: white;
+}
+
+.x16 {
+  background-color: #f59575d4;
+  color: white;
+}
+
+.x32 {
+  background-color: #f57d5fd3;
+  color: white;
+}
+
+.x64 {
+  background-color: #f65d3bd4;
+  color: white;
+}
+
+.x128 {
+  background-color: #edce71cf;
+  color: white;
+}
+
+.x256 {
+  background-color: #edcd63d3;
+  color: white;
+}
+
+.x512 {
+  background-color: #edc651d4;
+  color: white;
+}
+
+.x1024 {
+  background-color: #eec644d6;
+  color: white;
+}
+
+.x2048 {
+  background-color: #ecc330d4;
+  color: white;
+}
+
+.x4096 {
+  background-color: #fe3d3dd4;
+  color: white;
+}
+
+.x8192 {
+  background-color: #ff2020d8;
+  color: white;
+}
+/* Tiles CSS Ends Here */
