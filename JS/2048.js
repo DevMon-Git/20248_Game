@@ -13,6 +13,7 @@ window.onload = function () {
 document.getElementById('startGame').onclick = function () {
   document.getElementById('welcomeModal').style.display = 'none';
   score = 0; // Reset score
+  document.getElementById('score').innerText = score; // Update score display
   clearBoard(); // Clear the board visually and logically
   setGame(); // Reinitialize the game
   resetBackground(); // Ensure the main background is set when starting the game
@@ -22,6 +23,7 @@ document.getElementById('startGame').onclick = function () {
 document.getElementById('tryAgain').addEventListener('click', function () {
   document.getElementById('gameOverModal').style.display = 'none';
   score = 0; // Reset score
+  document.getElementById('score').innerText = score; // Update score display
   clearBoard(); // Clear the board visually and logically
   setGame(); // Reinitialize the game
   resetBackground(); // Reset the background to the main image
@@ -32,8 +34,8 @@ document.getElementById('exitGame').addEventListener('click', function () {
   document.getElementById('welcomeModal').style.display = 'block';
   document.getElementById('gameOverModal').style.display = 'none';
   score = 0; // Reset score
+  // It might not be necessary to update the score display here if `setGame` is not called and the game starts by pressing the "Start Game" button which already contains the score reset logic.
   clearBoard(); // Clear the board visually and logically
-  // No need to call setGame() here if you want the user to manually start the game by clicking "Start Game"
 });
 
 // Set Game Function
