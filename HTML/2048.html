@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragon 2048</title>
+    <link rel="icon" type="image/png" href="../assets/logo.webp" />
+    <link rel="stylesheet" href="../CSS/2048.css" />
+  </head>
+  <body>
+    <!-- Welcome Section -->
+    <div id="welcomeModal" class="modal">
+      <div class="startGame modal-content">
+        <h2>Welcome to Dragon 2048</h2>
+        <p>Let's try how strong dragon you are!</p>
+        <button id="startGame">Start the Game</button>
+      </div>
+    </div>
+
+    <!-- Score Board Section-->
+    <div class="scoreboard">
+      <h1>2048</h1>
+      <hr />
+      <h2>Score: <span id="score">0</span></h2>
+    </div>
+
+    <!-- Board Section-->
+    <div id="board"></div>
+
+    <!-- Game Over Section -->
+    <div id="gameOverModal" class="modal">
+      <div class="gameOver modal-content">
+        <h2>Game Over</h2>
+        <p id="finalScore"></p>
+        <div class="button-container">
+          <!-- Button container added here -->
+          <button id="tryAgain">Try Again</button>
+          <button id="exitGame">Exit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../JS/2048.js"></script>
+  </body>
+</html>
